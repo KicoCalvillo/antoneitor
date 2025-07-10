@@ -1,0 +1,6 @@
+{
+  "name": "Gestor de Incidencias Educativo",
+  "description": "Una aplicación para reportar, gestionar y visualizar incidencias informáticas y de edificios en un centro educativo. Los usuarios pueden reportar problemas, ver el estado de todas las incidencias y consultar estadísticas. Los administradores tienen acceso protegido para gestionar los estados de las incidencias y configurar la aplicación.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

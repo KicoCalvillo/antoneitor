@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Incidencias</title>
+    <script>
+      // Polyfill process.env for browser environments to prevent crashes.
+      // The @google/genai SDK expects process.env.API_KEY. In a no-build setup,
+      // this is not available. This shim allows the app to load, and the
+      // geminiService will gracefully handle the missing key.
+      if (typeof process === 'undefined') {
+        window.process = {
+          env: {
+            API_KEY: ""
+          }
+        };
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#005A9C',
+              'brand-secondary': '#4D8FAC',
+              'brand-accent': '#E87722',
+              'brand-light': '#F0F4F8',
+              'brand-dark': '#0A2A43',
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.8.0",
+    "recharts": "https://esm.sh/recharts@^2.12.7"
+  }
+}
+</script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-brand-light">
+    <div id="root"></div>
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="/index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
